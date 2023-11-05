@@ -1,0 +1,6 @@
+﻿  main.cpp
+C:\N3-HK1\OS\OS_ver3\OS_ver3\FAT.h(244,52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\N3-HK1\OS\OS_ver3\OS_ver3\FAT.h(273,52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\N3-HK1\OS\OS_ver3\OS_ver3\FAT.h(354,5): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\N3-HK1\OS\OS_ver3\OS_ver3\FAT.h(401): warning C4715: 'ReadSector': not all control paths return a value
+  OS_ver3.vcxproj -> C:\N3-HK1\OS\OS_ver3\x64\Debug\OS_ver3.exe
