@@ -78,17 +78,20 @@ FAT::FAT(LPCWSTR  drive)
     total_sectors_on_disk = Hex2Dec(read_offset("20", 4, BootSector));
     first_data_sector = sectors_BootSector + quantity_FAT * sectors_per_fat;
     first_RDET_sector = first_sector_of_cluster(first_RDET_cluster);
+    first_RDET_sector = first_sector_of_cluster(first_RDET_cluster);
+
 
 }
 
 void FAT::display_FAT32_information()
+
 {
     cout << "1. FAT type:                   " << this->FAT_type() << endl;
     cout << "2. Bytes / 1 sector:           " << dec << bytes_per_sector << endl;
     cout << "3. Sectors / 1 cluster (sC):   " << dec << sectors_per_cluster << endl;
     cout << "4. Sectors in BootSector (sB): " << dec << sectors_BootSector << endl;
     cout << "5. Quantity of FAT (nF):       " << dec << quantity_FAT << endl;
-    cout << "6. First cluster of RDET:      " << dec << first_RDET_cluster << endl;
+    cout << "6. RDET sectors:               " << dec << clusters_holding(first_RDET_cluster).size() * sectors_per_cluster << endl;
     cout << "7. Total sectors on disk:      " << dec << total_sectors_on_disk << endl;
     cout << "8. Sectors / 1 FAT (sF):       " << dec << sectors_per_fat << endl;
     cout << "9. First sector of FAT 1:      " << dec << sectors_BootSector << endl;
